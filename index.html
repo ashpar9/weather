@@ -5,19 +5,20 @@
   <meta charset="utf-8">
   <title>Weather Project</title>
   <link type="text/css" href="css/styles.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <h1 font-size="1rem">The Weather App</h1>
+    <div class="form col-lg-6">
+      <form action="/" method="POST">
+        <label class="lable" for="cityInput" font-size="2rem">City Name: </label>
+        <input id="cityInput" type="text" name="cityName">
+        <br>
+        <button type="submit" name="submit">Check Weather</button>
+      </form>
+    </div>
 
-<h1 font-size="1rem">The Weather App</h1>
-  <div class="form">
-    <form action="/" method="POST">
-      <label class="lable" for="cityInput" font-size="2rem">City Name: </label>
-      <input id="cityInput" type="text" name="cityName">
-      <br>
-      <button type="submit" name="submit">Check Weather</button>
-    </form>
-  </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="server.js" charset="utf-8"></script>
