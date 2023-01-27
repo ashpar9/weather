@@ -9,14 +9,18 @@
 
 <body>
 
-<h1>The Weather App</h1>
+<h1 font-size="1rem">The Weather App</h1>
   <div class="form">
     <form action="/" method="POST">
-      <label class="lable" for="cityInput">City Name: </label>
+      <label class="lable" for="cityInput" font-size="2rem">City Name: </label>
       <input id="cityInput" type="text" name="cityName">
+      <br>
       <button type="submit" name="submit">Check Weather</button>
     </form>
   </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="server.js" charset="utf-8"></script>
 </body>
 
 </html>
