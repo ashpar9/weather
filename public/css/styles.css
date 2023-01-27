@@ -17,7 +17,7 @@ body {
 }
 
 .lable {
-  font-size: 30px;
+  font-size: 70px;
   font-family: serif;
   font-weight: bold;
   padding-top: 20px;
@@ -25,7 +25,7 @@ body {
 }
 
 input {
-font: 30px;
+font: 50px;
 margin-bottom: 3px;
 color: black;
 
@@ -36,4 +36,8 @@ button {
   background-color: #205295;
   border-color: #205295;
   color: white;
+  height: 100px;
+  width: 100px;
+  margin-top: 5px;
+
 }
