@@ -3,11 +3,11 @@ font-size: 3rem;
 margin-top: 120px;
 margin-right: 10px;
 margin-left: 10%;
-color: #144272;
+color: #f8f6f6;
 }
 
 body {
-  background-color: #F8EDE3;
+  background-color: #07446f;
 }
 
 .form {
@@ -16,14 +16,13 @@ body {
   margin-left: 10%;
   margin-bottom: 15%;
   font-weight: bold;
-
 }
 
 .lable {
   font-size: 2rem;
   font-family: serif;
   font-weight: bold;
-  color: #579BB1;
+  color: #faf9f9;
 }
 
 input {
@@ -38,11 +37,20 @@ height: 30px;
 
 button {
   border-radius: 20px;
-  background-color: #205295;
+  background-color: #9e9ef1;
   border-color: #205295;
-  color: white;
+  color: rgb(52, 3, 3);
   height: 50px;
   width: 150px;
   margin-top: 15px;
 
+}
+#weatherResult {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  color: rgb(250, 248, 248);
+  position: absolute;
+  bottom: 125px;
+  left: 400px;
 }
