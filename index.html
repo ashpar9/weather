@@ -10,19 +10,39 @@
 
 <body>
   <h1 font-size="1rem">The Weather App</h1>
-    <div class="form col-lg-6">
-      <form action="/" method="POST">
-        <label class="lable" for="cityInput" font-size="2rem">City Name: </label>
-        <br>
-        <input id="cityInput" type="text" name="cityName">
-        <br>
-        <button type="submit" name="submit">Check Weather</button>
-      </form>
-    </div>
+  <div class="form col-lg-6">
+    <form action="/" method="POST">
+      <label class="lable" for="cityInput" font-size="2rem">City Name: </label>
+      <br>
+      <input id="cityInput" type="text" name="cityName">
+      <br>
+      <button type="submit" name="submit">Check Weather</button>
+    </form>
+  </div>
+  <div id="weatherResult"></div>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="server.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const cityName = document.querySelector('#cityInput').value;
+      fetch('/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'cityName=' + encodeURIComponent(cityName),
+      })
+      .then(response => response.json())
+      .then(data => {
+        const weatherResult = document.querySelector('#weatherResult');
+        weatherResult.innerHTML = `<p>The temperature in ${data.city} is ${data.temp} degrees Celsius.</p>
+                                   <p>Weather conditions: ${data.description}</p>
+                                   <img src="${data.iconURL}" alt="Weather icon">`;
+      })
+      .catch(error => console.error('Error:', error));
+    });
+  </script>
 </body>
 
 </html>
